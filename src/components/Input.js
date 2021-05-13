@@ -37,6 +37,10 @@ const Input = () => {
         return b[1] - a[1];
     });
 
+    //validation
+
+    const total = sortable.length;
+
     //On button click - find n word with most frequency count
     const [n, setN] = useState();
 
@@ -67,6 +71,10 @@ const Input = () => {
 
                                 <div className="col-md-6 offset-md-4">
                                     <button type="submit" className="btn btn-primary" onClick={() => {
+                                        if (n <= 0 || n > total) {
+                                            alert("Please enter in range 1 to " + total + ".")
+                                            window.location.reload(false);
+                                        }
                                         operation(n);
                                         setResult(ans);
                                         ans = [];
