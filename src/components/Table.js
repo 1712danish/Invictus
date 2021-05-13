@@ -8,13 +8,15 @@ const Table = (props) => {
                     <table className="table table-striped custab">
                         <thead>
                             <tr>
+                                <th>#</th>
                                 <th>Word</th>
                                 <th>Frequency</th>
                             </tr>
                         </thead>
-                        {props.data.map(e => {
+                        {props.data.map((e, i) => {
                             return (
                                 <tr>
+                                    <td>{i + 1}</td>
                                     <td>{e[0]}</td>
                                     <td>{e[1]}</td>
                                 </tr>
