@@ -57,7 +57,7 @@ const Input = () => {
 
     return (
         <>
-            <div className="cotainer">
+            <div className="cotainer" style={{background:"grey", padding:"5px"}}>
                 <div className="row justify-content-center">
                     <div className="col-md-8">
                         <div className="card">
@@ -70,7 +70,7 @@ const Input = () => {
                                 </div>
 
                                 <div className="col-md-6 offset-md-4">
-                                    <button type="submit" className="btn btn-primary" onClick={() => {
+                                    <button type="submit" className="btn btn-dark" onClick={() => {
                                         if (n <= 0 || n > total) {
                                             alert("Please enter in range 1 to " + total + ".")
                                             window.location.reload(false);
